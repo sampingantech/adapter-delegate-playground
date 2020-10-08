@@ -21,7 +21,12 @@ fun campaignAdapterDelegate() = adapterDelegateViewBinding<Campaign, Displayable
     { layoutInflater, root -> ItemCampaignBinding.inflate(layoutInflater, root, false) }
 ) {
     bind {
-
+        val bannerAdapter = BannerAdapter()
+        binding.recyclerBanner.apply {
+            adapter = bannerAdapter
+            itemAnimator = DefaultItemAnimator()
+            layoutManager = LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL, false)
+        }
     }
 }
 

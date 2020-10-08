@@ -27,6 +27,7 @@ fun campaignAdapterDelegate() = adapterDelegateViewBinding<Campaign, Displayable
             itemAnimator = DefaultItemAnimator()
             layoutManager = LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL, false)
         }
+        bannerAdapter.setItems(item.banners)
     }
 }
 
@@ -40,6 +41,7 @@ fun featuredAdapterDelegate() = adapterDelegateViewBinding<Featured, Displayable
             layoutManager = LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL, false)
             itemAnimator = DefaultItemAnimator()
         }
+        appAdapter.setItems(item.apps)
         binding.tvTitle.text = item.title
         binding.tvSubTitle.text = item.subTitle
     }
@@ -49,6 +51,13 @@ fun promotionAdapterDelegate() = adapterDelegateViewBinding<Promotion, Displayab
     { layoutInflater, root -> ItemPromotionBinding.inflate(layoutInflater, root, false) }
 ) {
     bind {
+        val promoAdapter = PromoAdapter()
+        binding.recyclerPromo.apply {
+            adapter = promoAdapter
+            itemAnimator = DefaultItemAnimator()
+            layoutManager = LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL, false)
+        }
+        promoAdapter.setItems(item.promos)
         binding.tvTitle.text = item.title
         binding.tvAppName.text = item.app.name
         binding.tvAppDeveloper.text = item.app.developer

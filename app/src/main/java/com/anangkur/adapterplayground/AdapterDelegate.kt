@@ -1,9 +1,9 @@
 package com.anangkur.adapterplayground
 
-import com.anangkur.adapterplayground.databinding.ItemBannerBinding
-import com.anangkur.adapterplayground.databinding.ItemCampaignBinding
-import com.anangkur.adapterplayground.databinding.ItemFeaturedBinding
-import com.anangkur.adapterplayground.databinding.ItemPromotionBinding
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.anangkur.adapterplayground.databinding.*
 import com.anangkur.adapterplayground.model.*
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
@@ -29,6 +29,12 @@ fun featuredAdapterDelegate() = adapterDelegateViewBinding<Featured, Displayable
     { layoutInflater, root -> ItemFeaturedBinding.inflate(layoutInflater, root, false) }
 ) {
     bind {
+        val appAdapter = AppAdapter()
+        binding.recyclerApp.apply {
+            adapter = appAdapter
+            layoutManager = LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL, false)
+            itemAnimator = DefaultItemAnimator()
+        }
         binding.tvTitle.text = item.title
         binding.tvSubTitle.text = item.subTitle
     }

@@ -6,5 +6,6 @@ import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 class MainAdapter : ListDelegationAdapter<List<DisplayableItem>>(
     bannerAdapterDelegate(),
     campaignAdapterDelegate(),
-    featuredAdapterDelegate()
+    featuredAdapterDelegate(),
+    promotionAdapterDelegate()
 )

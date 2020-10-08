@@ -3,10 +3,8 @@ package com.anangkur.adapterplayground
 import com.anangkur.adapterplayground.databinding.ItemBannerBinding
 import com.anangkur.adapterplayground.databinding.ItemCampaignBinding
 import com.anangkur.adapterplayground.databinding.ItemFeaturedBinding
-import com.anangkur.adapterplayground.model.Banner
-import com.anangkur.adapterplayground.model.Campaign
-import com.anangkur.adapterplayground.model.DisplayableItem
-import com.anangkur.adapterplayground.model.Featured
+import com.anangkur.adapterplayground.databinding.ItemPromotionBinding
+import com.anangkur.adapterplayground.model.*
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
 fun bannerAdapterDelegate() = adapterDelegateViewBinding<Banner, DisplayableItem, ItemBannerBinding>(
@@ -33,5 +31,16 @@ fun featuredAdapterDelegate() = adapterDelegateViewBinding<Featured, Displayable
     bind {
         binding.tvTitle.text = item.title
         binding.tvSubTitle.text = item.subTitle
+    }
+}
+
+fun promotionAdapterDelegate() = adapterDelegateViewBinding<Promotion, DisplayableItem, ItemPromotionBinding>(
+    { layoutInflater, root -> ItemPromotionBinding.inflate(layoutInflater, root, false) }
+) {
+    bind {
+        binding.tvTitle.text = item.title
+        binding.tvAppName.text = item.app.name
+        binding.tvAppDeveloper.text = item.app.developer
+        binding.tvAppRating.text = item.app.size.toString()
     }
 }

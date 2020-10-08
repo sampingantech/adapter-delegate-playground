@@ -40,6 +40,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
 
     implementation 'com.hannesdorfmann:adapterdelegates4:4.3.0'
+    implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:4.3.0'
 
     testImplementation 'junit:junit:4.13'
 

@@ -5,4 +5,4 @@ data class Banner(
     val subTitle: String,
     val description: String,
     val image: String
-)
+): DisplayableItem

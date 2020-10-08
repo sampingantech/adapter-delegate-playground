@@ -2,9 +2,9 @@ package com.anangkur.adapterplayground
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.anangkur.adapterplayground.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         adapter = MainAdapter()
         binding.recyclerMain.apply {
             adapter = this@MainActivity.adapter
-            layoutManager = LinearLayoutManager(this@MainActivity)
+            layoutManager = LinearLayoutManager(this@MainActivity, RecyclerView.VERTICAL, false)
             itemAnimator = DefaultItemAnimator()
         }
     }

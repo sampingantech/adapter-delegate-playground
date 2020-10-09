@@ -7,20 +7,6 @@ import com.anangkur.adapterplayground.databinding.*
 import com.anangkur.adapterplayground.model.*
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
-fun campaignAdapterDelegate() = adapterDelegateViewBinding<Campaign, DisplayableItem, ItemCampaignBinding>(
-    { layoutInflater, root -> ItemCampaignBinding.inflate(layoutInflater, root, false) }
-) {
-    bind {
-        val bannerAdapter = BannerAdapter()
-        binding.recyclerBanner.apply {
-            adapter = bannerAdapter
-            itemAnimator = DefaultItemAnimator()
-            layoutManager = LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL, false)
-        }
-        bannerAdapter.setItems(item.banners)
-    }
-}
-
 fun featuredAdapterDelegate() = adapterDelegateViewBinding<Featured, DisplayableItem, ItemFeaturedBinding>(
     { layoutInflater, root -> ItemFeaturedBinding.inflate(layoutInflater, root, false) }
 ) {

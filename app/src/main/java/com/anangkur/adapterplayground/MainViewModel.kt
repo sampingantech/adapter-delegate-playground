@@ -24,11 +24,6 @@ class MainViewModel: ViewModel() {
             App("Soccer Scores - FotMob", "Soccer Scores", "", 5.0f, 14, false),
             App("Focus Plant - Stay Focused Study Timer", "Focus Plant", "", 5.0f, 50, false)
         )))
-        displayableItems.add(Campaign(listOf(
-            Banner("Make stunning", "videos in seconds", "Explore templates", ""),
-            Banner("Change colors", "in one tap", "Try AI Select", ""),
-            Banner("Try new", "masking effects", "Make awesome videos", "")
-        )))
         _displayedItems.postValue(displayableItems)
     }
 }

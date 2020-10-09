@@ -12,12 +12,7 @@ class MainViewModel: ViewModel() {
 
     fun createDummyDisplayableItems() {
         val displayableItems = ArrayList<DisplayableItem>()
-        displayableItems.add(Promotion("New to rent", App("Google Play Movies & TV", "Google LLC", "", 4.0f, 4, false), listOf(
-            "", "", "", "", "", "", "", "", "", ""
-        )))
-        displayableItems.add(Promotion("Top selling ebooks on Play", App("Google Play Books - Ebooks, Audio", "Google LLC", "", 4.1f, 4, false), listOf(
-            "", "", "", "", "", "", "", "", "", ""
-        )))
+        
         _displayedItems.postValue(displayableItems)
     }
 }

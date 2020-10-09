@@ -1,4 +1,4 @@
-package com.anangkur.adapterplayground
+package com.anangkur.adapterplayground.util
 
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.DiffUtil

@@ -1,4 +1,4 @@
-package com.anangkur.adapterplayground
+package com.anangkur.adapterplayground.adapterDelegate
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

@@ -5,8 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.anangkur.adapterplayground.BannerAdapter
-import com.anangkur.adapterplayground.DelegateAdapter
+import com.anangkur.adapterplayground.childAdapter.BannerAdapter
 import com.anangkur.adapterplayground.databinding.ItemCampaignBinding
 import com.anangkur.adapterplayground.model.Campaign
 import com.anangkur.adapterplayground.model.DelegateAdapterItem

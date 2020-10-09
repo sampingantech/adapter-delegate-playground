@@ -3,7 +3,6 @@ package com.anangkur.adapterplayground.adapterDelegate
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.anangkur.adapterplayground.DelegateAdapter
 import com.anangkur.adapterplayground.databinding.ItemBannerBinding
 import com.anangkur.adapterplayground.model.Banner
 import com.anangkur.adapterplayground.model.DelegateAdapterItem

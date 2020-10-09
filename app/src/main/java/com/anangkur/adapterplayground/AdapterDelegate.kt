@@ -7,22 +7,6 @@ import com.anangkur.adapterplayground.databinding.*
 import com.anangkur.adapterplayground.model.*
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
-fun featuredAdapterDelegate() = adapterDelegateViewBinding<Featured, DisplayableItem, ItemFeaturedBinding>(
-    { layoutInflater, root -> ItemFeaturedBinding.inflate(layoutInflater, root, false) }
-) {
-    bind {
-        val appAdapter = AppAdapter()
-        binding.recyclerApp.apply {
-            adapter = appAdapter
-            layoutManager = LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL, false)
-            itemAnimator = DefaultItemAnimator()
-        }
-        appAdapter.setItems(item.apps)
-        binding.tvTitle.text = item.title
-        binding.tvSubTitle.text = item.subTitle
-    }
-}
-
 fun promotionAdapterDelegate() = adapterDelegateViewBinding<Promotion, DisplayableItem, ItemPromotionBinding>(
     { layoutInflater, root -> ItemPromotionBinding.inflate(layoutInflater, root, false) }
 ) {

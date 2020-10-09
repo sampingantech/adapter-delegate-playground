@@ -7,16 +7,6 @@ import com.anangkur.adapterplayground.databinding.*
 import com.anangkur.adapterplayground.model.*
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
-fun bannerAdapterDelegate() = adapterDelegateViewBinding<Banner, DisplayableItem, ItemBannerBinding>(
-    { layoutInflater, root -> ItemBannerBinding.inflate(layoutInflater, root, false) }
-) {
-    bind {
-        binding.tvTitle.text = item.title
-        binding.tvSubTitle.text = item.subTitle
-        binding.tvDescription.text = item.description
-    }
-}
-
 fun campaignAdapterDelegate() = adapterDelegateViewBinding<Campaign, DisplayableItem, ItemCampaignBinding>(
     { layoutInflater, root -> ItemCampaignBinding.inflate(layoutInflater, root, false) }
 ) {

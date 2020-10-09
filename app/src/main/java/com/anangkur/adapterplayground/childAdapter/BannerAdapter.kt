@@ -1,4 +1,4 @@
-package com.anangkur.adapterplayground
+package com.anangkur.adapterplayground.childAdapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

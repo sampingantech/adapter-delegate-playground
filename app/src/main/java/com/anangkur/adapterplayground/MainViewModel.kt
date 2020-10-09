@@ -7,11 +7,11 @@ import com.anangkur.adapterplayground.model.*
 
 class MainViewModel: ViewModel() {
 
-    private val _displayedItems = MutableLiveData<List<DisplayableItem>>()
-    val displayableItems: LiveData<List<DisplayableItem>> = _displayedItems
+    private val _displayedItems = MutableLiveData<List<DelegateAdapterItem>>()
+    val displayableItems: LiveData<List<DelegateAdapterItem>> = _displayedItems
 
     fun createDummyDisplayableItems() {
-        val displayableItems = ArrayList<DisplayableItem>()
+        val displayableItems = ArrayList<DelegateAdapterItem>()
         displayableItems.add(Banner("Covid-19", "resources", "Useful apps & more", ""))
         displayableItems.add(Promotion("New to rent", App("Google Play Movies & TV", "Google LLC", "", 4.0f, 4, false), listOf(
             "", "", "", "", "", "", "", "", "", ""
@@ -26,7 +26,7 @@ class MainViewModel: ViewModel() {
             App("Soccer Scores - FotMob", "Soccer Scores", "", 5.0f, 14, false),
             App("Focus Plant - Stay Focused Study Timer", "Focus Plant", "", 5.0f, 50, false)
         )))
-        displayableItems.add(Campaign(listOf(
+        displayableItems.add(Campaign(0, listOf(
             Banner("Make stunning", "videos in seconds", "Explore templates", ""),
             Banner("Change colors", "in one tap", "Try AI Select", ""),
             Banner("Try new", "masking effects", "Make awesome videos", "")

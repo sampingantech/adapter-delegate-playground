@@ -4,4 +4,12 @@ data class Featured(
     val title: String,
     val subTitle: String,
     val apps: List<App>
-): DisplayableItem
+): DelegateAdapterItem {
+    override fun id(): Any {
+        return title
+    }
+
+    override fun content(): Any {
+        return apps
+    }
+}

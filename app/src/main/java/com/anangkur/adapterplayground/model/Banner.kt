@@ -5,4 +5,12 @@ data class Banner(
     val subTitle: String,
     val description: String,
     val image: String
-): DisplayableItem
+): DelegateAdapterItem {
+    override fun id(): Any {
+        return title
+    }
+
+    override fun content(): Any {
+        return description
+    }
+}

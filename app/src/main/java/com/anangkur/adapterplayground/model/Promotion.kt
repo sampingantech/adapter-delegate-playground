@@ -4,4 +4,12 @@ data class Promotion(
     val title: String,
     val app: App,
     val promos: List<String>
-): DisplayableItem
+): DelegateAdapterItem {
+    override fun id(): Any {
+        return title
+    }
+
+    override fun content(): Any {
+        return promos
+    }
+}
